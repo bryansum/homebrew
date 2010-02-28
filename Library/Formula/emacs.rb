@@ -8,11 +8,12 @@ end
 
 class Emacs <Formula
   if ARGV.include? "--cocoa"
-    # tested bazaar revision: 99478
-    head 'bzr://http://bzr.savannah.gnu.org/r/emacs/trunk'
+    # git.or.cz mirror is an order(s) of magnitude faster than
+    # official bzr.
+    head 'git://repo.or.cz/emacs.git'
   else
     url 'http://ftp.gnu.org/pub/gnu/emacs/emacs-23.1.tar.bz2'
-    head 'bzr://http://bzr.savannah.gnu.org/r/emacs/trunk'
+    head 'git://repo.or.cz/emacs.git'
     md5 '17f7f0ba68a0432d58fa69d05a2225be'
   end
   homepage 'http://www.gnu.org/software/emacs/'
